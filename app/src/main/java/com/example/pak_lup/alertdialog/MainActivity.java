@@ -161,7 +161,13 @@ public class MainActivity extends AppCompatActivity {
         DialogInterface.OnClickListener lis1 = new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                bSelect[which] = true;
+               for(int i=0;i<bSelect.length;i++){
+                   if(i!=which){
+                       bSelect[i]=false;
+                   }else{
+                       bSelect[i]=true;
+                   }
+               }
             }
         };
         builder=new AlertDialog.Builder(this);
